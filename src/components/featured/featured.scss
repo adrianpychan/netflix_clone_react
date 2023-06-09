@@ -1,0 +1,83 @@
+.featured{
+    height: 90vh;
+    position: relative;
+
+    .category{
+        position:absolute;
+        top:80px;
+        left:50px;
+        font-size: 30px;
+        font-weight:500;
+        color: white;
+        display:flex;
+        align-items: center;
+
+        select{
+            cursor:pointer;
+            background-color: var(--main-color);
+            border:1px solid white;
+            color: white;
+            margin-left: 20px;
+            padding: 5px;
+
+        }
+    
+    }
+
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+        //these combinations will adjust the image ratio according to the user minimizing, maximizing the webpage
+    }
+
+    .info{
+        width: 35%;
+        position: absolute;
+        left: 50px;
+        bottom: 100px;
+        color:white;
+        display: flex; //makes them evenly placed
+        flex-direction: column; //organises all the child items (stuff below it) the class "info" into columns
+
+
+        img{
+            width: 400px;
+        }
+
+        .desc{
+            margin: 20px 0px; // up and down, = 20, left and right = 0
+        }
+
+        .buttons{
+            display:flex;
+
+            button{
+                padding: 10px 20px; //topbottom, leftright
+                border: none;
+                border-radius:5px;
+                display:flex;
+                align-items: center; //alligns all the items in the center (horizontal <------>, x axis)
+                justify-content: center; // 
+                font-size: 18px; //makes the text bigger
+                font-weight:500; //bolds it
+                margin-right:10px; //makes space between the margins on the right of the box
+                cursor:pointer; //cursor becomes a click sign
+
+                &.play{ //if PLAY button is clicked...
+                    background-color:white;
+                    color: var(--main-color);
+                }
+
+                &.more{
+                    background-color: grey;
+                    color: white;
+                }
+
+                span{
+                    margin-left: 5px; //stretches left handside of each span tag under info class
+                }
+            }
+        }
+    }
+}
