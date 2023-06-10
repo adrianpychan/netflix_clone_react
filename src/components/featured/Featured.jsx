@@ -29,13 +29,13 @@ export default function Featured({type}) {
             </div>
         )}
         <img 
-            src="https://images.pexels.com/photos/6899260/pexels-photo-6899260.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" 
+            src="https://d34gglw95p9zsk.cloudfront.net/item_cocreco_images/images/000/117/102/large/593847f4-8b79-4816-9594-a7ff726fd4af.jpg" 
             alt="" 
         />
         <div className="info">
-            <img src="https://occ-0-1432-1433.1.nflxso.net/dnm/api/v6/LmEnxtiAuzezXBjYXPuDgfZ4zZQ/AAAABUZdeG1DrMstq-YKHZ-dA-cx2uQN_YbCYx7RABDk0y7F8ZK6nzgCz4bp5qJVgMizPbVpIvXrd4xMBQAuNe0xmuW2WjoeGMDn1cFO.webp?r=df1" alt="" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Ultraman_dyna_logo.svg/2560px-Ultraman_dyna_logo.svg.png" alt="" />
             <span className="desc">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                As humanity begins migrating beyond Earth, a new Ultraman named Dyna arrives and bonds with defense organization GUTS' newest recruit, Shin Asuka, to protect a colony on Mars.
             </span>
             <span className="buttons">
                 <button className="play">

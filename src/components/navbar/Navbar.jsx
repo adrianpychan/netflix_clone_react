@@ -23,18 +23,19 @@ const Navbar = () => {
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png" 
                 alt="" 
                 />
-                <span>Homepage</span>
+                <span>Home</span>
                 <span>Series</span>
-                <span>Movies</span>
-                <span>New and Popular</span>
+                <span>Films</span>
+                <span>New & Popular</span>
                 <span>My List</span>
+                <span>Browse by Languages</span>
             </div>
             <div className="right">
                 <Search className="icon"/>
-                <span>KID</span>
+                <span>Children</span>
                 <Notifications className="icon" />
                 <img 
-                src="https://images.pexels.com/photos/6899260/pexels-photo-6899260.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" 
+                src="https://d34gglw95p9zsk.cloudfront.net/item_cocreco_images/images/000/117/102/large/593847f4-8b79-4816-9594-a7ff726fd4af.jpg" 
                 alt="" 
                 />
                 <div className="profile">

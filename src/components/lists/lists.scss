@@ -1,0 +1,44 @@
+.lists{
+    width: 100%;
+    margin-top: 10px;
+
+    .listTitle{
+        color:white;
+        font-size:20px;
+        font-weight: 500;
+        margin-left: 50px; //shifts it towards the left (like a cool website)
+    }
+
+    .wrapper{
+        position: relative; //if you do position absolute, the parent must be position relative
+        .sliderArrow{
+            width: 50px; //makes it wider
+            height: 100%;
+            background-color: rgb(22,22,22, 0.5); //the 0.5 makes it 50% transparent
+            color: white;
+            position: absolute;
+            z-index: 99;
+            top: 0;
+            bottom: 0;
+            margin: bottom;
+            cursor: pointer;
+
+            &.left{
+                left:0;
+            }
+
+            &.right{
+                right:0;
+            }
+        }
+
+        .container{
+            margin-left: 50px;
+            display:flex; //display flex puts all the child items into a row instead
+            margin-top: 10px; //more space on the top of boxes compared to distance of continue to watch
+            width: max-content;
+            transform: translateX(0px); //simply moves it left (negative), right (positive), it does not interfere compared to margin-left
+            transition: all 1s ease; //animation using css
+        }
+    }
+}
