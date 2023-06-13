@@ -1,0 +1,20 @@
+.watch{
+    width: 100vw;
+    height: 100vh;
+
+    .back{
+        display:flex; //alligns text to middle of arrow
+        align-items: center; //alligns text to center of arrow
+        position:absolute; //places this in the video box, fixes it absolute to the video box
+        top: 10px; //drops it downwards from the top 10 pixels
+        left: 10px; //pushes it right 10 pixels
+        color:white; //text color white
+        cursor: pointer;
+    }
+
+    .video{
+        width: 100%;
+        height: 100%;
+        object-fit: cover; //fills up the screen width and height
+    }
+}
