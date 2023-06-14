@@ -1,0 +1,106 @@
+.login {
+    width: 100vw; //full screen width
+    height: 100vh; //full screen height
+    background: linear-gradient(
+        to bottom, 
+        rgba(0,0,0,0) 0%, 
+        rgba(0,0,0,0.7) 100%,
+    ), 
+
+    linear-gradient(
+        to top,
+        rgba(0,0,0,0) 0%, 
+        rgba(0,0,0,0.7) 100%,
+    ),
+    //to bottom - makes the bottom part shade darker
+    // starting color is transparent, and gets more darker as you go down
+    //top is 100% transparent, and then becomes 0% transparent
+    url("https://user-images.githubusercontent.com/33485020/108069438-5ee79d80-7089-11eb-8264-08fdda7e0d11.jpg");
+    opacity: 1;
+    background-size: cover;
+    position: relative;
+  
+    .top {
+      .wrapper {
+            padding: 20px 125px; //height vs width
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+  
+        .logo{
+            height: 40px;
+            padding: 5px;
+            cursor: pointer;
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+        .wrapper {
+        //   justify-content: space-between;
+          align-items: center;
+        }
+      
+        .logo {
+          height: 30px;
+          cursor: pointer;
+          transform: translateX(-90px);
+          left: 100px;
+        }
+    }
+  
+    .container {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+  
+      form {
+        width: 300px;
+        height: 300px;
+        padding: 30px;
+        border-radius: 5px;
+        background-color: var(--main-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+  
+        input {
+          height: 40px;
+          border-radius: 5px;
+          background-color: gray;
+          color: white;
+          padding-left: 10px;
+  
+          &::placeholder {
+            color: lightgray;
+          }
+        }
+  
+        button {
+          height: 40px;
+          border-radius: 5px;
+          background-color: red;
+          color: white;
+          border: none;
+          font-size: 18px;
+          font-weight: 500;
+          cursor: pointer;
+        }
+  
+        span {
+          color: lightgray;
+          b {
+            color: white;
+          }
+        }
+      }
+    }
+  }
