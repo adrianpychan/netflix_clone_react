@@ -22,14 +22,17 @@
 
     .top{
         .wrapper{
-            padding: 20px 150px; //height vs width
+            padding: 20px 125px; //height vs width
             display:flex;
+            flex-direction: row;
             justify-content: space-between;
             align-items: center;
 
             .logo{
                 height: 40px;
                 padding: 5px;
+                cursor: pointer;
+                float: left;
             }
 
             .loginButton{
@@ -41,23 +44,24 @@
                 font-size: 16px; //font size
                 font-weight: 500; //boldness
                 cursor: pointer;
-
             }
 
             @media (max-width: 768px) {
                 .wrapper {
-                  flex-direction: column;
-                  align-items: flex-start;
-                  height: auto;
+                //   justify-content: space-between;
+                  align-items: center;
                 }
               
                 .logo {
-                  margin-bottom: 10px;
+                  height: 30px;
+                  cursor: pointer;
+                  transform: translateX(-90px);
+                  left: 100px;
+                
                 }
-              
-                .loginButton {
-                  margin-left: 0;
-                  margin-top: 10px;
+
+                .loginButton{
+                    transform: translateX(90px);
                 }
               }
         }
