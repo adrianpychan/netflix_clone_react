@@ -81,14 +81,17 @@
 
         h1{
             font-style: 50px;
+            pointer-events: auto;
         }
 
         h2{
             margin: 20px;
+            pointer-events: auto;
         }
 
         p{
             font-style: 20px;
+            pointer-events: auto;
         }
 
         .input{
@@ -99,6 +102,7 @@
             justify-content: space-between;
             margin-top: 20px;
             border-radius: 5px;
+            pointer-events: all;
 
             input{
                 flex: 8; //It takes up 9 times as much space as other elements in the input container
