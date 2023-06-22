@@ -32,6 +32,7 @@
                 height: 40px;
                 padding: 5px;
                 cursor: pointer;
+                user-select: none;
             }
 
             .loginButton{
@@ -102,7 +103,7 @@
             justify-content: space-between;
             margin-top: 20px;
             border-radius: 5px;
-            pointer-events: all;
+            pointer-events: auto;
 
             input{
                 flex: 8; //It takes up 9 times as much space as other elements in the input container
