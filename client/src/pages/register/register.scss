@@ -81,22 +81,26 @@
         pointer-events: none;
 
         h1{
-            font-style: 50px;
+            font-size: 55px;
+            text-align: center;
             pointer-events: auto;
         }
 
         h2{
-            margin: 20px;
+            font-size: 25px;
+            margin: 30px;
+            text-align: center;
             pointer-events: auto;
         }
 
         p{
-            font-style: 20px;
+            font-size: 18px;
             pointer-events: auto;
+            text-align: center;
         }
 
         .input{
-            width: 32%;
+            width: 38%;
             height: 50px;
             display:flex;
             align-items: center;
