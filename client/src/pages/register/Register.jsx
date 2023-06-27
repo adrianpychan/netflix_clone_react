@@ -1,61 +1,59 @@
-import { KeyboardArrowRight } from "@material-ui/icons"
-import "./register.scss"
-import { useRef, useState } from "react"
+import { KeyboardArrowRight } from "@material-ui/icons";
+import "./register.scss";
+import { useRef, useState } from "react";
 
 export default function Register() {
-    const [email, setEmail] = useState("");
-    const [passowrd, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+  const [passowrd, setPassword] = useState("");
 
-    const emailRef = useRef();
-    const passwordRef = useRef();
+  const emailRef = useRef();
+  const passwordRef = useRef();
 
-    const handleStart = () => {
-        setEmail(emailRef.current.value)
-    }
+  const handleStart = () => {
+    setEmail(emailRef.current.value);
+  };
 
-    const handleFinish = () => {
-        setPassword(passwordRef.current.value)
-    }
+  const handleFinish = () => {
+    setPassword(passwordRef.current.value);
+  };
 
   return (
     <div className="register">
-        <div className="top">
-            <div className="wrapper">
-                <a href = "https://netflix.com">
-                    <img 
-                    className = "logo"
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png" 
-                    alt=""
-                    />
-                </a>
-                <button className="loginButton">
-                    Sign In
-                </button>
-            </div>
+      <div className="top">
+        <div className="wrapper">
+          <a href="https://netflix.com">
+            <img
+              className="logo"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png"
+              alt=""
+            />
+          </a>
+          <button className="loginButton">Sign In</button>
         </div>
-        <div className="container">
-            <h1>Unlimited movies, TV shows, and more</h1>
-            <h2>Watch anywhere. Cancel anytime.</h2>
-            <p>
-                Ready to watch? Enter your email to create or restart your membership.
-            </p> 
-            {!email ? (
-                <div className="input">
-                    <input type="email" placeholder="Email address" ref={emailRef}/>
-                    <button className="registerButton" onClick={handleStart}>
-                        Get Started
-                        <KeyboardArrowRight/>
-                    </button>
-                </div>
-                ) : (
-                <form className="input">
-                    <input type="password" placeholder="Password" ref={passwordRef} />
-                    <button className="registerButton" onClick={handleFinish}>
-                        Start Membership
-                    </button>
-                </form>
-                )}    
-        </div>
+      </div>
+      <div className="container">
+        <h1>Unlimited movies, TV shows, and more</h1>
+        <h2>Watch anywhere. Cancel anytime.</h2>
+        <p>
+          Ready to watch? Enter your email to create or restart your membership.
+        </p>
+        {!email ? (
+          <div className="input">
+            <input type="email" placeholder="Email address" ref={emailRef} />
+            <button className="registerButton" onClick={handleStart}>
+              Get Started
+              <KeyboardArrowRight />
+            </button>
+          </div>
+        ) : (
+          <form className="input">
+            <input type="password" placeholder="Password" ref={passwordRef} />
+            <button className="registerButton" onClick={handleFinish}>
+              Start Membership
+            </button>
+          </form>
+        )}
+      </div>
     </div>
-  )
+  );
 }
