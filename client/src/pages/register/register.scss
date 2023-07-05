@@ -65,7 +65,7 @@
 
   .container {
     position: absolute;
-    width: 80%;
+    width: 100%;
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
@@ -97,7 +97,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-top: 20px;
+      margin-top: 30px;
       border-radius: 5px;
 
       input {
@@ -110,7 +110,7 @@
         font-weight: 400;
         background-color: rgba(0, 0, 0, 0.2);
         border-radius: 5px;
-        margin-top: 15px;
+        margin-right: 5px;
         user-select: none;
       }
 
@@ -128,7 +128,6 @@
         flex: 3; //It takes up 3 times as much space as other elements in the input container
         height: 101%;
         background-color: red;
-        transform: translateX(12px);
         border: none;
         color: white;
         font-size: 18px;
@@ -137,7 +136,20 @@
         display: flex;
         align-items: center; // allign in center
         justify-content: center; //places all the items into the center
-        margin-top: 15px;
+        margin-left: 5px;
+      }
+    }
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 40px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      p {
+        font-size: 16px;
       }
     }
   }
