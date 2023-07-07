@@ -1,114 +1,147 @@
-.login{
-    width: 100vw; //full screen width
-    height: 100vh; //full screen height
-    background: linear-gradient(
-        to bottom, 
-        rgba(0,0,0,0) 0%, 
-        rgba(0,0,0,0.7) 100%,
-    ), 
-
-    linear-gradient(
-        to top,
-        rgba(0,0,0,0) 0%, 
-        rgba(0,0,0,0.7) 100%,
+body {
+  width: 100vw; //full screen width
+  height: 100vh; //full screen height
+  background-color: var(--main-color);
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.7) 100%
     ),
+    linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%),
     //to bottom - makes the bottom part shade darker
     // starting color is transparent, and gets more darker as you go down
     //top is 100% transparent, and then becomes 0% transparent
-    url("https://user-images.githubusercontent.com/33485020/108069438-5ee79d80-7089-11eb-8264-08fdda7e0d11.jpg");
-    opacity: 1;
-    background-size: cover;
-    position: relative;
+    url("https://assets.nflxext.com/ffe/siteui/vlv3/ce221d7a-8901-41d9-b726-3ea2efe3a650/609a5a84-5d31-44c4-ab1f-22e57ff0721a/HK-en-20230703-popsignuptwoweeks-perspective_alpha_website_large.jpg");
+  opacity: 1;
+  background-size: cover;
+  position: relative;
+}
 
-    .top{
-        .wrapper{
-            padding: 20px 125px; //height vs width
-            display:flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-
-            .logo{
-                height: 40px;
-                padding: 5px;
-                cursor: pointer;
-                user-select: none;
-            }
-
-            @media (max-width: 768px) {
-                .wrapper {
-                  justify-content: space-between;
-                  align-items: center;
-                }
-              
-                .logo {
-                  height: 30px;
-                  cursor: pointer;
-                  transform: translateX(-90px);
-                  left: 100px;
-                
-                }
-            }
-        }
-    }
-
-    .container {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
+.login {
+  .top {
+    .wrapper {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      justify-content: space-between;
       align-items: center;
-      justify-content: center;
-      color: white;
-      pointer-events: none;
-  
-      form {
-        width: 300px;
-        height: 300px;
-        padding: 30px;
-        border-radius: 5px;
-        background-color: var(--main-color);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        pointer-events: auto;
-  
-        input {
-          height: 40px;
-          border-radius: 5px;
-          background-color: gray;
-          color: white;
-          padding-left: 10px;
-  
-          &::placeholder {
-            color: lightgray;
-          }
-        }
-  
-        button {
-          height: 40px;
-          border-radius: 5px;
-          background-color: red;
-          color: white;
-          border: none;
-          font-size: 18px;
-          font-weight: 500;
-          cursor: pointer;
+      position: static;
+      z-index: 1;
+
+      .logo {
+        height: 40px;
+        transform: translate(169px, 20px);
+        cursor: pointer;
+        user-select: none;
+      }
+
+      .loginButton {
+        // position: static;
+        transform: translate(-169px, 20px);
+        // right: 10%;
+        background-color: red; //make box red
+        color: white; //text inside white
+        border-radius: 5px; //curve the surrounding corners
+        border: none; //get rid of border
+        padding: 9px 15px; // height x width
+        font-size: 16px; //font size
+        font-weight: 500; //boldness
+        cursor: pointer;
+      }
+
+      @media (max-width: 1280px) {
+        .wrapper {
+          justify-content: space-between;
+          align-items: center;
         }
 
-        b{
+        .logo {
           cursor: pointer;
+          transform: translate(25px, 20px);
         }
-  
-        span {
-          color: lightgray;
-          b {
-            color: white;
-          }
+
+        .loginButton {
+          transform: translate(-25px, 20px);
+        }
+      }
+
+      @media (max-width: 960px) {
+        .wrapper {
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .logo {
+          height: 30px;
+          cursor: pointer;
+          transform: translate(25px, 20px);
+          // left: 100px;
+        }
+
+        .loginButton {
+          padding: 5px 10px; // height x width
+          transform: translate(-25px, 20px);
         }
       }
     }
   }
+
+  .container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    pointer-events: none;
+
+    form {
+      width: 300px;
+      height: 300px;
+      padding: 30px;
+      border-radius: 5px;
+      background-color: var(--main-color);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      pointer-events: auto;
+
+      input {
+        height: 40px;
+        border-radius: 5px;
+        background-color: gray;
+        color: white;
+        padding-left: 10px;
+
+        &::placeholder {
+          color: lightgray;
+        }
+      }
+
+      button {
+        height: 40px;
+        border-radius: 5px;
+        background-color: red;
+        color: white;
+        border: none;
+        font-size: 18px;
+        font-weight: 500;
+        cursor: pointer;
+      }
+
+      b {
+        cursor: pointer;
+      }
+
+      span {
+        color: lightgray;
+        b {
+          color: white;
+        }
+      }
+    }
+  }
+}
