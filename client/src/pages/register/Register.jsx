@@ -18,17 +18,19 @@ export default function Register() {
   };
 
   return (
-    <div className="register">
-      <div className="top">
-        <div className="wrapper">
-          <a href="https://netflix.com">
-            <img
-              className="logo"
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png"
-              alt=""
-            />
-          </a>
-          <button className="loginButton">Sign In</button>
+    <>
+      <div className="register">
+        <div className="top">
+          <div className="wrapper">
+            <a href="https://netflix.com">
+              <img
+                className="logo"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png"
+                alt=""
+              />
+            </a>
+            <button className="loginButton">Sign In</button>
+          </div>
         </div>
       </div>
       <div className="container">
@@ -54,6 +56,6 @@ export default function Register() {
           </form>
         )}
       </div>
-    </div>
+    </>
   );
 }

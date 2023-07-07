@@ -1,7 +1,8 @@
-.register {
+body {
   width: 100vw; //full screen width
   height: 100vh; //full screen height
-  background: linear-gradient(
+  background-color: black;
+  background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0) 0%,
       rgba(0, 0, 0, 0.7) 100%
@@ -10,11 +11,12 @@
     //to bottom - makes the bottom part shade darker
     // starting color is transparent, and gets more darker as you go down
     //top is 100% transparent, and then becomes 0% transparent
-    url("https://user-images.githubusercontent.com/33485020/108069438-5ee79d80-7089-11eb-8264-08fdda7e0d11.jpg");
+    url("https://assets.nflxext.com/ffe/siteui/vlv3/ce221d7a-8901-41d9-b726-3ea2efe3a650/609a5a84-5d31-44c4-ab1f-22e57ff0721a/HK-en-20230703-popsignuptwoweeks-perspective_alpha_website_large.jpg");
   opacity: 1;
   background-size: cover;
-  position: relative;
+}
 
+.register {
   .top {
     .wrapper {
       padding: 20px 125px; //height vs width
@@ -22,22 +24,26 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      position: relative;
+      position: static;
       z-index: 1;
 
       .logo {
         height: 40px;
-        padding: 5px;
+        // margin: auto;
+        // padding: 5px;
         cursor: pointer;
         user-select: none;
       }
 
       .loginButton {
+        // position: static;
+        top: 3%;
+        right: 10%;
         background-color: red; //make box red
         color: white; //text inside white
         border-radius: 5px; //curve the surrounding corners
         border: none; //get rid of border
-        padding: 5px 15px; // height x width
+        padding: 8px 15px; // height x width
         font-size: 16px; //font size
         font-weight: 500; //boldness
         cursor: pointer;
@@ -53,7 +59,7 @@
           height: 30px;
           cursor: pointer;
           transform: translateX(-90px);
-          left: 100px;
+          // left: 100px;
         }
 
         .loginButton {
@@ -62,95 +68,96 @@
       }
     }
   }
+}
 
-  .container {
-    position: absolute;
-    width: 100%;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
+.container {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+
+  h1 {
+    font-size: 55px;
+    padding: 15px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 25px;
+    margin: 30px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .input {
+    width: 38%;
+    height: 50px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    color: white;
+    justify-content: space-between;
+    margin-top: 30px;
+    border-radius: 5px;
 
+    input {
+      flex: 8; //It takes up 9 times as much space as other elements in the input container
+      height: 100%;
+      border: 0.5px solid white;
+      padding: 0 10px;
+      width: 70%;
+      color: white;
+      font-weight: 400;
+      background-color: rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+      margin-right: 5px;
+      user-select: none;
+    }
+
+    input::email {
+      color: white;
+      opacity: 1;
+    }
+
+    input::placeholder {
+      color: white;
+      opacity: 1;
+    }
+
+    .registerButton {
+      flex: 3; //It takes up 3 times as much space as other elements in the input container
+      height: 101%;
+      background-color: red;
+      border: none;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 5px;
+      display: flex;
+      align-items: center; // allign in center
+      justify-content: center; //places all the items into the center
+      margin-left: 5px;
+    }
+  }
+  @media (max-width: 768px) {
     h1 {
-      font-size: 55px;
-      text-align: center;
+      font-size: 40px;
     }
 
     h2 {
-      font-size: 25px;
-      margin: 30px;
-      text-align: center;
+      font-size: 20px;
     }
 
     p {
-      font-size: 18px;
-      text-align: center;
-    }
-
-    .input {
-      width: 38%;
-      height: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: 30px;
-      border-radius: 5px;
-
-      input {
-        flex: 8; //It takes up 9 times as much space as other elements in the input container
-        height: 100%;
-        border: 0.5px solid white;
-        padding: 0 10px;
-        width: 70%;
-        color: white;
-        font-weight: 400;
-        background-color: rgba(0, 0, 0, 0.2);
-        border-radius: 5px;
-        margin-right: 5px;
-        user-select: none;
-      }
-
-      input::email {
-        color: white;
-        opacity: 1;
-      }
-
-      input::placeholder {
-        color: white;
-        opacity: 1;
-      }
-
-      .registerButton {
-        flex: 3; //It takes up 3 times as much space as other elements in the input container
-        height: 101%;
-        background-color: red;
-        border: none;
-        color: white;
-        font-size: 18px;
-        cursor: pointer;
-        border-radius: 5px;
-        display: flex;
-        align-items: center; // allign in center
-        justify-content: center; //places all the items into the center
-        margin-left: 5px;
-      }
-    }
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 40px;
-      }
-
-      h2 {
-        font-size: 20px;
-      }
-
-      p {
-        font-size: 16px;
-      }
+      font-size: 16px;
     }
   }
 }
