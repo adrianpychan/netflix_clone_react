@@ -1,7 +1,7 @@
 body {
   width: 100vw; //full screen width
   height: 100vh; //full screen height
-  background-color: black;
+  background-color: var(--main-color);
   background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0) 0%,
@@ -14,12 +14,12 @@ body {
     url("https://assets.nflxext.com/ffe/siteui/vlv3/ce221d7a-8901-41d9-b726-3ea2efe3a650/609a5a84-5d31-44c4-ab1f-22e57ff0721a/HK-en-20230703-popsignuptwoweeks-perspective_alpha_website_large.jpg");
   opacity: 1;
   background-size: cover;
+  position: relative;
 }
 
 .register {
   .top {
     .wrapper {
-      padding: 20px 125px; //height vs width
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -29,27 +29,42 @@ body {
 
       .logo {
         height: 40px;
-        // margin: auto;
-        // padding: 5px;
+        transform: translate(169px, 20px);
         cursor: pointer;
         user-select: none;
       }
 
       .loginButton {
         // position: static;
-        top: 3%;
-        right: 10%;
+        transform: translate(-169px, 20px);
+        // right: 10%;
         background-color: red; //make box red
         color: white; //text inside white
         border-radius: 5px; //curve the surrounding corners
         border: none; //get rid of border
-        padding: 8px 15px; // height x width
+        padding: 9px 15px; // height x width
         font-size: 16px; //font size
         font-weight: 500; //boldness
         cursor: pointer;
       }
 
-      @media (max-width: 768px) {
+      @media (max-width: 1280px) {
+        .wrapper {
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .logo {
+          cursor: pointer;
+          transform: translate(25px, 20px);
+        }
+
+        .loginButton {
+          transform: translate(-25px, 20px);
+        }
+      }
+
+      @media (max-width: 960px) {
         .wrapper {
           justify-content: space-between;
           align-items: center;
@@ -58,12 +73,13 @@ body {
         .logo {
           height: 30px;
           cursor: pointer;
-          transform: translateX(-90px);
+          transform: translate(25px, 20px);
           // left: 100px;
         }
 
         .loginButton {
-          transform: translateX(90px);
+          padding: 5px 10px; // height x width
+          transform: translate(-25px, 20px);
         }
       }
     }
@@ -72,10 +88,8 @@ body {
 
 .container {
   position: absolute;
+  top: 285px;
   width: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -83,19 +97,20 @@ body {
   color: white;
 
   h1 {
-    font-size: 55px;
-    padding: 15px;
+    font-size: 3em;
+    font-weight: 900;
     text-align: center;
   }
 
   h2 {
-    font-size: 25px;
-    margin: 30px;
+    font-size: 1.5rem;
+    margin: 20px;
     text-align: center;
   }
 
   p {
-    font-size: 18px;
+    margin-top: 8px;
+    font-size: 1.25rem;
     text-align: center;
   }
 
@@ -105,7 +120,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 30px;
+    margin-top: 25px;
     border-radius: 5px;
 
     input {
@@ -147,17 +162,31 @@ body {
       margin-left: 5px;
     }
   }
-  @media (max-width: 768px) {
+
+  @media (max-width: 844px) {
     h1 {
-      font-size: 40px;
+      font-size: 2.5em;
+      min-width: 70%;
     }
 
     h2 {
-      font-size: 20px;
+      font-size: 1.125rem;
     }
 
     p {
-      font-size: 16px;
+      font-size: 1.125rem;
+    }
+
+    input {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2em;
+      min-width: 70%;
     }
   }
 }
