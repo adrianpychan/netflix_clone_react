@@ -95,6 +95,7 @@ body {
   justify-content: center;
   flex-direction: column;
   color: white;
+  // padding: 5px 0;
 
   h1 {
     font-size: 3em;
@@ -115,20 +116,22 @@ body {
   }
 
   .input {
-    width: 38%;
+    // width: 38%;
+    padding: 23px;
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 25px;
+    // margin-top: 25px;
     border-radius: 5px;
 
     input {
-      flex: 8; //It takes up 9 times as much space as other elements in the input container
+      flex: 6.55; //It takes up 9 times as much space as other elements in the input container
+      display: flex;
       height: 100%;
-      border: 0.5px solid white;
+      border: 0.5px solid grey;
       padding: 0 10px;
-      width: 70%;
+      width: 425px;
       color: white;
       font-weight: 400;
       background-color: rgba(0, 0, 0, 0.2);
@@ -138,17 +141,18 @@ body {
     }
 
     input::email {
-      color: white;
+      color: grey;
       opacity: 1;
     }
 
     input::placeholder {
-      color: white;
+      padding: 0px 5px;
+      color: lightgrey;
       opacity: 1;
     }
 
     .registerButton {
-      flex: 3; //It takes up 3 times as much space as other elements in the input container
+      flex: 3.45; //It takes up 3 times as much space as other elements in the input container
       height: 101%;
       background-color: red;
       border: none;
@@ -176,17 +180,32 @@ body {
     p {
       font-size: 1.125rem;
     }
-
-    input {
-      display: flex;
-      flex-direction: row;
-    }
   }
 
   @media (max-width: 768px) {
     h1 {
       font-size: 2em;
       min-width: 70%;
+    }
+  }
+
+  @media (max-width: 570px) {
+    p {
+      font-size: 1rem;
+    }
+    .input {
+      display: block;
+      text-align: center;
+
+      input {
+        width: 350px;
+      }
+
+      .registerButton {
+        display: inline-flex;
+        width: 150px;
+        margin-top: 15px;
+      }
     }
   }
 }
