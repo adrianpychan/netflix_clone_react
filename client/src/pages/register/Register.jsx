@@ -17,6 +17,10 @@ export default function Register() {
     setPassword(passwordRef.current.value);
   };
 
+  const LoginRedirect = () => {
+    window.location.href = "https://netflix.com/login";
+  };
+
   return (
     <>
       <div className="register">
@@ -29,7 +33,9 @@ export default function Register() {
                 alt=""
               />
             </a>
-            <button className="loginButton">Sign In</button>
+            <button className="loginButton" onClick={LoginRedirect}>
+              Sign In
+            </button>
           </div>
         </div>
       </div>
